@@ -74,11 +74,11 @@ function Array:drawRandomPonderatedValue(sMethod)
 	local aElements = self:getTable()
 	local oSelectedElement = nil
 
-	-- Create ponderations for table according to spawning chance
+	-- Create ponderations for table 
     local nAccumulatedChance = 0
     local nChance = nil
 
-    -- We create the preset ponderation according to the ressource spawning chance
+    -- We create the preset ponderations
     for nIndex,oElement in pairs(aElements) do
     	if oElement[sMethod] == nil then
     		break
