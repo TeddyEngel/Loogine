@@ -14,7 +14,7 @@ Features
 --------
 
 * Core classes
-* Unit testing class
+* Unit testing methods
 * Helper methods
 
 Warnings
