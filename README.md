@@ -22,11 +22,29 @@ Warnings
 
 * The engine might evolve in the future.
 
+Code
+----
+
+The source code can be downloaded from the [GitHub page][gh].
+
 See Also
 --------
 
-* LICENCE file.
+* [Loogine's GitHub page][gh]
+* [Luoop's Github page][loo]
+* [Object oriented programming][oop]
+
+Get in touch
+------------
+* [My Website][ws]
+* [My Games][gws]
 * [@Teddy_Engel][tw]
 
+[loo]: https://github.com/TeddyEngel/Luoop
+[gh]: https://github.com/TeddyEngel/Loogine
+[oop]:http://en.wikipedia.org/wiki/Object-oriented_programming
+
+[ws]: http://www.engelteddy.com
+[gws]: http://www.teddyengelgames.com
 [tw]: https://twitter.com/Teddy_Engel
 
