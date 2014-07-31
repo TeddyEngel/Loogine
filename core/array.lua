@@ -38,7 +38,7 @@ function Array:_setRandomTable(aRandomTable)
 end
 
 -- Assigns a random probability to one of the elements
-function Array:setRandomPonderation(nIndex, nLow, nHigh)
+function Array:setRandomWeight(nIndex, nLow, nHigh)
 	local aRandomTable = self:_getRandomTable()
 
 	aRandomTable[nIndex] = {}
@@ -53,7 +53,7 @@ function Array:drawRandomValue()
 end
 
 -- Returns a random value according to the preset random ponderations
-function Array:drawRandomPresetPonderatedValue(nLow, nHigh)
+function Array:drawRandomPresetWeightedValue(nLow, nHigh)
 	local oRandomElement = nil
 	local aRandomTable = self:_getRandomTable()
 
@@ -70,7 +70,7 @@ function Array:drawRandomPresetPonderatedValue(nLow, nHigh)
 end
 
 -- Returns a random value from the object array based on the ponderated value returned from method
-function Array:drawRandomPonderatedValue(sMethod)
+function Array:drawRandomWeightedValue(sMethod)
 	local aElements = self:getTable()
 	local oSelectedElement = nil
 
@@ -84,11 +84,11 @@ function Array:drawRandomPonderatedValue(sMethod)
     		break
     	end
         nChance = oElement[sMethod](oElement)
-        self:setRandomPonderation(nIndex, nAccumulatedChance, nAccumulatedChance + nChance)
+        self:setRandomWeight(nIndex, nAccumulatedChance, nAccumulatedChance + nChance)
         nAccumulatedChance = nAccumulatedChance + nChance
     end
     -- Selecting the element based on total accumulated chance
-    oSelectedElement = self:drawRandomPresetPonderatedValue(1, nAccumulatedChance)
+    oSelectedElement = self:drawRandomPresetWeightedValue(1, nAccumulatedChance)
     return oSelectedElement
 end
 
